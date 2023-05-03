@@ -41,7 +41,7 @@ function selectingRequiredFields(obj, status, time) {
     wind: { deg = 0, speed = 0 },
     clouds: { all = 0 },
     rain = 0,
-  } = obj
+  } = obj || {}
 
   const data = {
     tempFeelsLike: roundData(feels_like),
@@ -53,7 +53,6 @@ function selectingRequiredFields(obj, status, time) {
     precipMm: rain && status == 'current' ? rain[0] : rain,
     rainChance: rain,
   }
-
   return data
 }
 
@@ -77,6 +76,7 @@ export async function currentWeatherDataOpenWeather(coordinate, forecastTime) {
       responseDataForecast.list,
       forecastTime
     )
+
     const forecastObjData = selectingRequiredFields(
       responseDataForecastNecessary,
       'forecast',

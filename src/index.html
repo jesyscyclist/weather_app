@@ -5,34 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script
-      src="https://api-maps.yandex.ru/2.1?apikey=688efe04-e23e-42f4-98a7-b8cea7d40838&lang=ru_RU"
-      type="text/javascript"
-    ></script>
-    <script
-      type="text/javascript"
-      src="./js/RoutesApiYandex/createmap.js"
-    ></script>
-    <script src="index.js" type="module"></script>
-    <!-- &onload=myfunctionload&onerror=myfunctionerror -->
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <p>Карта Санкт-Петербурга</p>
     <div id="YMapsID"></div>
-    <div class="route-box">
-      <div class="input-box__item">
-        <input class="route-box__input" type="text" id="start-point" /><label
-          for="start-point"
-          >Точка отправки</label
-        >
+    <div class="autocomplete-wrapper">
+      <div class="autocomplete__block">
+        <input
+          class="autocomplete__input"
+          type="text"
+          placeholder="Откуда"
+          value="Санкт-Петербург"
+        />
       </div>
-      <div class="route-box__item">
-        <input class="route-box__input" type="text" id="finish-point" /><label
-          for="finish-point"
-          >Финишная точка</label
-        >
+      <div class="autocomplete__block">
+        <input
+          class="autocomplete__input"
+          type="text"
+          placeholder="Куда"
+          value="Москва"
+        />
+        <!-- <ul class="autocomplete-list">
+          <li class="autocomplete-list__item">
+            <button class="autocomplete-list__button">
+              adasdddddddddddddddddddd1asdaaaaaaaaaaaaaddddddddddddddddddddddddsssssssssssssssssssss
+            </button>
+          </li>
+          <li class="autocomplete-list__item">
+            <button class="autocomplete-list__button">2</button>
+          </li>
+          <li class="autocomplete-list__item">
+            <button class="autocomplete-list__button">3</button>
+          </li>
+        </ul> -->
       </div>
     </div>
+    <div class="view-buttons__wrapper">
+      <button class="view-button button-add">Добавить</button>
+      <button class="view-button button-reset">Сбросить</button>
+      <button class="view-button button-create-route" visibility="hidden">
+        Построить маршрут
+      </button>
+    </div>
+    <!-- https://yandex.ru/dev/maps/jsapi/doc/2.1/quick-start/index.html -->
+    <script
+      src="https://api-maps.yandex.ru/2.1?apikey=688efe04-e23e-42f4-98a7-b8cea7d40838&lang=ru_RU"
+      type="text/javascript"
+    ></script>
+    <script src="./js/RoutesApiYandex/createmap.js" type="module"></script>
+    <script src="index.js" type="module"></script>
   </body>
 </html>

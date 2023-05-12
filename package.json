@@ -1,0 +1,30 @@
+{
+  "name": "weather_app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jesyscyclist/weather_app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jesyscyclist/weather_app/issues"
+  },
+  "homepage": "https://github.com/jesyscyclist/weather_app#readme",
+  "keywords": [],
+  "description": "",
+  "dependencies": {
+    "D": "^1.0.0",
+    "webpack": "^5.82.1",
+    "webpack-cli": "^5.1.1"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "html-webpack-plugin": "^5.5.1"
+  }
+}

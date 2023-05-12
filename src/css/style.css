@@ -1,11 +1,50 @@
-/* <div id="YMapsID" style="width: 450px; height: 350px;"></div>   */
 #YMapsID {
   width: 100%;
   height: 350px;
 }
 
-.route-box {
+.autocomplete-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.autocomplete-wrapper__input {
+  display: inline-block;
+  position: relative;
+}
+
+.autocomplete__input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.autocomplete-list {
+  position: absolute;
+  list-style: none;
+  padding: unset;
+  margin: unset;
+  width: 100%;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.autocomplete-list__item {
+  border: 1px solid #e9e9e9;
+  border-top: unset;
+  background: #ffffff;
+}
+
+.autocomplete-list__item:hover {
+  background: #f7f7f7;
+}
+
+.autocomplete-list__button {
+  border: unset;
+  background: unset;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.5em;
 }

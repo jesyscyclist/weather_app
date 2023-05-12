@@ -20,5 +20,5 @@ async function log() {
 
 //log()
 
-import { addListeners } from './js/HTMLInteraction/inputListeners.js'
-addListeners()
+import { addListenersToDefaultElem } from './js/HTMLInteraction/eventListenersToDefeaultElem.js'
+addListenersToDefaultElem()

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  <script defer src="main.9bd22344f92c0e504cdf.js"></script></head>
+  <body>
+    <p>Карта Санкт-Петербурга</p>
+    <div id="YMapsID"></div>
+    <div class="autocomplete-wrapper">
+      <div class="autocomplete__block">
+        <input
+          class="autocomplete__input"
+          type="text"
+          placeholder="Откуда"
+          value="Санкт-Петербург"
+        />
+      </div>
+      <div class="autocomplete__block">
+        <input
+          class="autocomplete__input"
+          type="text"
+          placeholder="Куда"
+          value="Москва"
+        />
+        <!-- <ul class="autocomplete-list">
+          <li class="autocomplete-list__item">
+            <button class="autocomplete-list__button">
+              adasdddddddddddddddddddd1asdaaaaaaaaaaaaaddddddddddddddddddddddddsssssssssssssssssssss
+            </button>
+          </li>
+          <li class="autocomplete-list__item">
+            <button class="autocomplete-list__button">2</button>
+          </li>
+          <li class="autocomplete-list__item">
+            <button class="autocomplete-list__button">3</button>
+          </li>
+        </ul> -->
+      </div>
+    </div>
+    <div class="view-buttons__wrapper">
+      <button class="view-button button-add">Добавить</button>
+      <button class="view-button button-reset">Сбросить</button>
+      <button class="view-button button-create-route" visibility="hidden">
+        Построить маршрут
+      </button>
+    </div>
+    <script
+      src="https://api-maps.yandex.ru/2.1?apikey=688efe04-e23e-42f4-98a7-b8cea7d40838&lang=ru_RU"
+      type="text/javascript"
+    ></script>
+    <script src="./js/RoutesApiYandex/createmap.js" type="module"></script>
+    <script src="index.js" type="module"></script>
+  </body>
+</html>
